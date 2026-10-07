@@ -1,5 +1,7 @@
 # Equilíbrio — MVP
 
+https://young-max2007.github.io/equilibrio/
+
 Protótipo front-end responsivo branco + verde para apoio à redução/interrupção do consumo de álcool.
 
 Inclui: objetivos, check-in diário, vontade 0–10, gatilhos, apoio rápido, plano de prevenção, pessoa de confiança com consentimento, biblioteca, ajuda profissional, progresso, exportação e exclusão de dados.
