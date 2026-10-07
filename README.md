@@ -1,23 +1,7 @@
-# Equilíbrio — versão verde
+# Equilíbrio — MVP
 
-Protótipo front-end responsivo inspirado no conceito da referência enviada.
+Protótipo front-end responsivo branco + verde para apoio à redução/interrupção do consumo de álcool.
 
-## Recursos
-- Login e cadastro em modo demonstração
-- Dashboard
-- Registro diário
-- Humor
-- Quantidade de doses
-- Metas
-- Progresso
-- Histórico
-- Persistência com localStorage
-- Layout responsivo para celular, tablet e desktop
+Inclui: objetivos, check-in diário, vontade 0–10, gatilhos, apoio rápido, plano de prevenção, pessoa de confiança com consentimento, biblioteca, ajuda profissional, progresso, exportação e exclusão de dados.
 
-## Como executar
-Abra `index.html` no navegador.
-
-Não existe backend nesta primeira versão. Os dados ficam somente no navegador através de `localStorage`.
-
-## Próxima etapa
-Conectar uma API/backend real, autenticação segura e banco de dados.
+Os dados desta versão ficam no `localStorage`. Não é diagnóstico nem substitui atendimento profissional. A integração de AUDIT/AUDIT-C deve usar instrumento validado e deixar claro que é triagem. Consumo intenso pode exigir avaliação médica antes de interrupção abrupta.
