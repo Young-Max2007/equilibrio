@@ -7,3 +7,25 @@
 @media(max-width:720px){.auth-layout{display:flex;flex-direction:column}.auth-visual{min-height:250px;padding:34px}.register-layout .auth-visual{order:0}.register-layout .auth-form-area{order:1}.auth-logo{width:58px;height:58px;margin-bottom:14px}.auth-visual h1{font-size:2.4rem}.auth-visual p{font-size:.95rem}.auth-form-area{padding:28px 20px}.stats-grid,.card-grid.three,.form-grid,.support-grid,.settings-grid,.reward-grid,.content-grid{grid-template-columns:1fr}.hero-card{padding:25px}.hero-mark,.big-number{font-size:4rem}.form-grid .full-field{grid-column:auto}.topbar{margin-bottom:20px}.topbar h1{font-size:1.7rem}}
 
 .auth-illustration{display:block;width:min(100%,430px);max-height:250px;object-fit:cover;border-radius:24px;margin-bottom:28px}.auth-visual-content>.auth-logo{display:none}@media(max-width:720px){.auth-illustration{max-height:145px;width:100%;margin-bottom:16px}.auth-visual-content>.auth-logo{display:block}}
+
+/* Compatibilidade com a interface renderizada pelo app.js */
+.app-shell{min-height:100vh;display:grid;grid-template-columns:250px 1fr}
+.side-logo{width:44px;height:44px;border-radius:12px;margin:0 auto 18px;display:block}
+.sidebar>a{padding:11px 12px;border-radius:10px;color:var(--muted);display:flex;gap:10px;align-items:center;margin:2px 0}
+.sidebar>a:hover,.sidebar>a.active{background:var(--surface-2);color:var(--green)}
+.sidebar .btn{margin-top:auto}
+.btn.secondary{background:var(--surface-2);color:var(--text);border:1px solid var(--border)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:18px}
+.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin-top:0}
+.card p{line-height:1.6;color:var(--muted)}
+.stat{display:block;font-size:2rem;margin:6px 0;color:var(--green)}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}
+.formgrid label:last-of-type,.formgrid button,.formgrid p{grid-column:1/-1}
+.formgrid button{width:max-content}
+.card button:not(.btn){border:0;border-radius:12px;padding:12px 17px;font-weight:800;background:var(--green);color:white;cursor:pointer;margin:6px 6px 6px 0}
+.card textarea{min-height:100px}
+.list{display:grid;gap:12px;margin-top:18px}
+@media(max-width:1000px){.app-shell{display:block}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.grid,.grid2,.formgrid{grid-template-columns:1fr}.formgrid label:last-of-type,.formgrid button,.formgrid p{grid-column:auto}.sidebar{padding-top:70px}}
