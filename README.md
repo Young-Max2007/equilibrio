@@ -1,57 +1,48 @@
-# Equilíbrio — MVP organizado
+# Equilíbrio — GitHub Pages
 
-Projeto local de apoio à redução/interrupção do consumo de álcool, com Node.js + SQLite nativo.
+Esta é a versão **100% estática** do Equilíbrio para publicar diretamente no GitHub Pages.
 
-## Estrutura
+## Publicação
+1. Extraia a pasta `Equilíbrio`.
+2. Coloque o conteúdo dela na raiz do seu repositório GitHub.
+3. No GitHub, abra **Settings → Pages**.
+4. Em **Source**, escolha **Deploy from a branch**.
+5. Selecione a branch principal e `/ (root)**.
+6. Salve. O arquivo de entrada é `index.html`.
 
-- `server.js` — API e servidor local
-- `data/equilibrio.db` — banco SQLite criado automaticamente
-- `public/index.html` — login
-- `public/cadastro.html` — cadastro
-- `public/principal.html` — painel inicial
-- `public/checkin.html` — check-in diário
-- `public/recompensas.html` — recompensas por número de check-ins
-- `public/gatilhos.html` — mapa de gatilhos
-- `public/plano.html` — plano de prevenção
-- `public/apoio.html` — pessoa de confiança
-- `public/conteudos.html` — biblioteca educativa
-- `public/progresso.html` — progresso
-- `public/configuracoes.html` — configurações e tema
-- `public/css/style.css` — estilos
-- `public/scripts/` — JavaScript separado por responsabilidade
-- `public/imagens/` — logo e imagem ilustrativa substituíveis
+## O que foi removido
+- `server.js`
+- `package.json`
+- SQLite
+- necessidade de Node.js/Termux para executar o site
 
-## Executar no Termux
+## Banco local
+O projeto usa **IndexedDB**, banco de dados nativo do navegador, para guardar usuários, check-ins, gatilhos, planos e dados de apoio. A sessão usa armazenamento local.
 
-```bash
-cd Equilíbrio
-node server.js
-```
+O cadastro verifica se o e-mail já existe e o login verifica se a senha corresponde à conta cadastrada. A senha não fica armazenada em texto puro; é usado hash SHA-256 com salt.
 
-Abra no navegador:
+### Limitação importante
+Como o GitHub Pages só hospeda arquivos estáticos, esta autenticação é adequada para **protótipo, trabalho acadêmico e demonstração**, mas não deve ser tratada como autenticação de produção. Os dados ficam no navegador daquele dispositivo e não são compartilhados com outros dispositivos.
 
-`http://localhost:3000`
+Para produção, a aplicação precisaria de um backend seguro e banco de dados no servidor.
 
-O projeto não usa dependências externas. O backend usa `node:sqlite`, `crypto` e módulos nativos do Node.
+## Funcionalidades incluídas
+- Login e cadastro
+- Objetivo do usuário
+- Check-in diário
+- Humor, consumo, craving 0–10 e gatilhos
+- Mapa de gatilhos
+- Plano de prevenção
+- Apoio rápido e mensagem para pessoa de confiança
+- Recompensas por número de check-ins
+- Progresso
+- Conteúdos educativos
+- Tema claro/escuro
+- Exportação dos dados
+- Exclusão da conta e dados locais
+- Layout responsivo
 
-## Autenticação
+## Segurança e saúde
+O Equilíbrio é uma ferramenta de apoio/educação e não substitui diagnóstico ou acompanhamento profissional.
 
-- Cadastro verifica se o e-mail já existe.
-- Login verifica se o e-mail existe.
-- A senha é comparada com hash `scrypt` + salt.
-- Senhas não são armazenadas em texto puro.
-- A sessão atual fica em memória; reiniciar o servidor exige novo login.
-
-## Recompensas
-
-As recompensas são baseadas na quantidade total de check-ins registrados, não em uma sequência de dias sem beber. Os nomes das empresas e descontos são exemplos para você substituir.
-
-## Imagens
-
-Você pode substituir manualmente:
-- `public/imagens/logo.svg`
-- `public/imagens/auth-illustration.svg`
-
-sem precisar alterar o restante do sistema.
-
-> Este MVP é educacional/de apoio e não diagnostica transtornos. Em situações de uso pesado, a interrupção abrupta do álcool pode causar abstinência perigosa e deve ser avaliada por profissional de saúde.
+A abstinência de álcool pode ser perigosa em pessoas com dependência. O sistema não orienta interrupção abrupta sem avaliação médica. Em situação de risco imediato, procure atendimento de emergência ou uma pessoa de confiança.

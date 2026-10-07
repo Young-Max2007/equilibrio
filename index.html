@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equilíbrio — Entrar</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+<main class="auth-layout login-layout">
+  <section class="auth-visual">
+    <div class="auth-visual-content"><img class="auth-illustration" src="imagens/auth-illustration.svg" alt="" aria-hidden="true">
+      <img class="auth-logo" src="imagens/logo.svg" alt="Logo Equilíbrio">
+      <span class="eyebrow">EQUILÍBRIO</span>
+      <h1>Um passo de cada vez.</h1>
+      <p>Registre seu dia, entenda seus gatilhos e construa estratégias de apoio sem culpa.</p>
+    </div>
+  </section>
+  <section class="auth-form-area">
+    <div class="auth-card">
+      <img class="mobile-logo" src="imagens/logo.svg" alt="Logo Equilíbrio">
+      <span class="eyebrow">BEM-VINDO DE VOLTA</span>
+      <h2>Entrar na sua conta</h2>
+      <p class="muted">Continue acompanhando seu caminho.</p>
+      <form id="loginForm">
+        <label>E-mail<input id="email" type="email" autocomplete="email" required></label>
+        <label>Senha<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="btn primary full" type="submit">Entrar</button>
+        <p id="authMessage" class="form-message"></p>
+      </form>
+      <p class="auth-switch">Ainda não tem conta? <a href="cadastro.html">Criar cadastro</a></p>
+    </div>
+  </section>
+</main>
+<script src="scripts/auth.js"></script>
+</body>
+</html>
