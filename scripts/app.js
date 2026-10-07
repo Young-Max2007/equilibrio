@@ -65,7 +65,7 @@ function escapeHTML(value) {
 }
 
 function applyTheme() {
-  document.body.classList.toggle('dark', localStorage.getItem('eq_theme') === 'dark');
+  document.documentElement.dataset.theme = localStorage.getItem('eq_theme') === 'dark' ? 'dark' : 'light';
 }
 
 function getContent() { return document.querySelector('#content'); }
